@@ -1,0 +1,75 @@
+/****************DEFAULT STYLE*********************/
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: var(--white-color);
+
+}
+
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+#root{
+    height: 100%;
+    height: 100%;
+}
+
+
+/*************FONT STYLE*****************/
+
+@font-face {
+    font-family: 'Abang';
+    src: url('./fonts/Abang.otf') format('opentype'),
+         url('./fonts/Abang.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'BreeSerif';
+    src: url('./fonts/BreeSerif-Regular.ttf') format('opentype'),
+         url('./fonts/BreeSerif-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/****************COLOR STYLE*********************/
+
+/* src/index.css */
+:root {
+    --black-color: #000A20;
+    --darkBlue-color: #00194D;
+    --lighBlue-color: #364E76;
+    --orange-color: #E47735;
+    --white-color: #FFFFFF;
+  }
+
+
+/****************BASE STYLE*********************/
+
+h1{
+    font-family: 'Abang';
+}
+
+p,button,a{
+    font-family: 'BreeSerif';
+}

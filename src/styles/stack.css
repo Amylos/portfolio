@@ -1,0 +1,71 @@
+/*
+--black-color
+--darkBlue-color
+--lighBlue-color
+--orange-color
+--white-color
+ */
+
+
+#Stack{
+    width: 100%;
+    height: 25%;
+    background-color: var(--darkBlue-color);
+}
+
+.StackLogo{
+    width: 50%;
+    height: 10%;
+    border: 1px solid black;
+    padding: 50px;
+    display: flex;
+}
+
+.ReactIcon{
+    background-image: url('../media//images/React-Icon.png');
+    animation: cloudAnimation 3s ease-in-out infinite;
+
+}
+
+.SQLIcon{
+    background-image: url('../media//images/MySQL-Icon.png');
+    animation: cloudAnimation 3.2s ease-in-out infinite;
+
+}
+
+.SymfonyIcon{
+    background-image: url('../media//images/Symfony-Icon.png');
+    animation: cloudAnimation 3.6s ease-in-out infinite;
+}
+
+.Logo{
+    margin: 20px;
+    height: 150px;
+    width: 150px;
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 13px 14px 7px 7px rgba(224, 223, 223, 0.2);
+    transition: all 0.3s ease;
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.Logo:hover {
+    animation-play-state: paused;
+
+}
+
+@keyframes cloudAnimation {
+    0%{
+        transform: translateY(-10px);
+    }
+    50%{
+        transform: translateY(20px);
+
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}

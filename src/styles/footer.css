@@ -1,0 +1,15 @@
+/*
+--black-color
+--darkBlue-color
+--lighBlue-color
+--orange-color
+--white-color
+ */
+
+
+
+#Footer{
+    width: 100%;
+    height: 25%;
+    background-color: var(--orange-color);
+}

@@ -1,0 +1,294 @@
+/*
+--black-color
+--darkBlue-color
+--lighBlue-color
+--orange-color
+--white-color
+ */
+
+
+ #Header{
+    width: 100%;
+    height: 25%;
+    background-color: var(--darkBlue-color);
+}
+
+
+/*************************************/
+/***************NAVBAR****************/
+/*************************************/
+
+#NavBar{
+    width: 100%;
+    height: 10%;
+    top: 0%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vw;
+    z-index: 1000;
+    margin-top: 10px;
+}
+
+
+
+/**********************/
+/*********LOGO*********/
+/**********************/
+
+
+#Logo{
+    width: 17vw;
+    height: 14vh;
+    text-align: center;
+    animation: Appearing 1.7s linear;
+    background-image: url('../media/images/Andrew.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+
+@keyframes Appearing {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+/************************/
+/*******NAVIGATION*******/
+/************************/
+
+#Navigation{
+    width: 50vw;
+    height: 5vh;
+    border-radius: 20px;
+    position: fixed;
+    transform: translateX(50%);
+    right: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    animation: Appearing 1s ease-in-out;
+
+}
+
+#NavigationPhone {
+    width: 50vw;
+    height: 8vh;
+    border-radius: 50px;
+    position: fixed;
+    transform: translateX(50%);
+    right: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    bottom: 20px;
+    background-color: rgba(36, 25, 25, 0.7); /* Couleur de fond de la partie gauche avec transparence */
+    backdrop-filter: blur(10px); /* Effet de flou */
+    margin: 1vw;
+}
+
+#NavigationPhone Button{
+    width: 6vw;
+    height: 6vw;
+    border-radius: 100px;
+    padding: 1vw;
+    background-color: transparent;
+
+}
+
+#NavigationPhone Button div{
+    background-size: contain;
+    background-position: center;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+}
+
+#NavigationPhone .currentSection {
+    animation: GetSelected 1s forwards;
+
+}
+
+@keyframes GetSelected {
+    0%{
+
+    }
+    100%{
+        background-color: var(--lighBlue-color);
+    }
+}
+
+
+#HomeButton{
+    background-image: url('../media/images/home.png');
+}
+
+#ContactButton{
+    background-image: url('../media/images/contact.png');
+}
+
+#SkillsButton{
+    background-image: url('../media/images/roue.png');
+}
+
+#ProjectsButton{
+    background-image: url('../media/images/book.png');
+}
+
+#AboutButton{
+    background-image: url('../media/images/person.png');
+
+}
+
+#Navigation button{
+    background-color: transparent;
+    color: var(--white-color);
+    width: 10vw;
+    height: 6vh;
+    font-size: 1.4vw;
+    font-family: 'Abang';
+    border-bottom: 1px  solid rgba(255, 255, 255, 0);
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+    position: relative;
+}
+
+#Navigation button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 1);
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+@keyframes Appearing {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+#Navigation button:hover::after{
+    width: 100%;
+    left: 0;
+}
+
+#Navigation .currentSection::after {
+    box-shadow: 0px 0px 7px 1px rgb(255, 255, 255);
+    width: 100%;
+    left: 0;
+}
+
+/************************/
+/*********DISPLAY********/
+/************************/
+
+
+
+#DisplayMode{
+    width: 8vw;
+    height: 6vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#DisplayMode div{
+    width: 4vw;
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/********************************************/
+/***************PRESENTATION*****************/
+/********************************************/
+
+
+#Presentation{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.Header .TitleContainer {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.Header .TitleContainer .Line {
+    width: 14%;
+    height: 0.3vh;
+    transform: translateX(600%);
+    animation: lineSlideIn 0.8s forwards cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.Header .TitleContainer .Title,
+.Header .TitleContainer .Text {
+    overflow: hidden;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    color: var(--white-color);
+
+}
+
+.Header .TitleContainer .Title h1 {
+    font-size: 5vw;
+    font-weight: bold;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: textRiseUp 0.6s forwards 0.5s;
+}
+
+.Header .TitleContainer .Text p {
+    width: 70%;
+    font-size: 2vw;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: textRiseUp 0.6s forwards 0.9s;
+}
+
+@keyframes lineSlideIn {
+    0% {
+        transform: translateX(600%);
+    }
+    100% {
+        transform: translateX(0);
+        background-color: rgb(240, 102, 16);
+    }
+}
+
+@keyframes textRiseUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
