@@ -2,6 +2,17 @@
 import React, { forwardRef,useRef,useEffect,useState } from 'react';
 import '../styles/projects.css'
 
+
+
+
+const projects = [
+  {
+
+  },
+]
+
+
+
 const Projects = forwardRef((props, ref) => {
 
     const [isProjectOpen, setIsProjectOpen] = useState(false);
@@ -23,30 +34,82 @@ const Projects = forwardRef((props, ref) => {
       setIsProjectOpen(project);
     };
 
-
   return (
     <section ref={ref} className='Projects' id='Projects'>
 
-            <h1 className='selectedProject'>Projets selectionnes</h1>
+            <h1 id='TitleProjects'>Projets selectionnes</h1>
+            <div id='SelectedProjects'>
+                  <div className='Project'>
+                    <div className='ProjectImg'>
+                      <div className='ProjectAnimation'></div>
+                    </div>
+                    <div className='ProjectInfos'>
+                       <h2 className='ProjectTitle'>Titre</h2>
+                       <p className='ProjectText'>Text</p>
+                       <p className='ProjectShow'>Show</p>
+                    </div>
+                  </div>
+                  <div className='Project'>
+                    <div className='ProjectImg'>
+                      <div className='ProjectAnimation'></div>
+                    </div>
+                    <div className='ProjectInfos'>
+                       <h2 className='ProjectTitle'>Titre</h2>
+                       <p className='ProjectText'>Text</p>
+                       <p className='ProjectShow'>Show</p>
 
-            <div className='SectionContainer'>
-                <div className="SectionInfos">
-                    <div className="Section EPH">
+                    </div>
+                  </div>
+
+                  <div className='Project'>
+                    <div className='ProjectImg'>
+                      <div className='ProjectAnimation'></div>
+                    </div>
+                    <div className='ProjectInfos'>
+                       <h2 className='ProjectTitle'>Titre</h2>
+                       <p className='ProjectText'><span>Text</span></p>
+                       <p className='ProjectShow'><span>Show</span></p>
+                    </div>
+                  </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+            {/* <div className='SectionContainer'> */}
+                {/* <div className="SectionInfos"> */}
+                    {/* <div className="Section EPH">
                     <div className="SectionAnimated" onClick={() => toggleProject('EPH')}>
                         <h1 className='ProjectName'>Ephemeride</h1>
                         <p className='ProjectDescription'>Création d'une application web pour un spectacle intéractif</p>
                     </div>
-                    </div>
-                    <ul className='StackUsed'>
+                    </div> */}
+                    {/* <ul className='StackUsed'>
                         <li>React JS</li>
                         <li>Strapi</li>
                         <li>MySQL</li>
                         <li>PHP</li>
                         <li>webSocket</li>
-                    </ul>
-                </div>
+                    </ul> */}
+                {/* </div> */}
 
-                <div className="SectionInfos">
+                {/* <div className="SectionInfos">
                     <div className="Section CNES">
                       <div className="SectionAnimated" onClick={() => toggleProject('CNES')}>
                           <h1 className='ProjectName'>Projet Marauder</h1>
@@ -59,9 +122,9 @@ const Projects = forwardRef((props, ref) => {
                         <li>C++</li>
                         <li>Python</li>
                     </ul>
-                </div>
+                </div> */}
 
-                <div className="SectionInfos">
+                {/* <div className="SectionInfos">
                     <div className="Section GAP">
                     <div className="SectionAnimated" onClick={() => toggleProject('GAP')}>
                         <h1 className='ProjectName'>Gestionnaire d'article personnalise</h1>
@@ -72,15 +135,14 @@ const Projects = forwardRef((props, ref) => {
                         <li>React JS</li>
                         <li>Symfony</li>
                     </ul>
-                </div>
+                </div> */}
 
-            </div>
+            {/* </div> */}
 
-            <div className={isProjectOpen ? 'ProjectBackgroundDisplayed' : 'ProjectBackground'} >
-            {
+            {/* <div className={isProjectOpen ? 'ProjectBackgroundDisplayed' : 'ProjectBackground'} > */}
+            {/* {
               isProjectOpen === 'EPH' ?
               <div className={isProjectOpen ? 'ProjectDisplayed' : 'Project'}  ref={projectRef}>
-               
               </div>
               :
               isProjectOpen === 'CNES' ?
@@ -92,8 +154,8 @@ const Projects = forwardRef((props, ref) => {
         </div>
 
               : null
-            }
-        </div>
+            } */}
+        {/* </div> */}
 
 
     </section>

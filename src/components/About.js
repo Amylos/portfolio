@@ -31,10 +31,10 @@ const About = forwardRef((props, ref) => {
                 <h1 className='Observe'>BLABLB</h1>
                 <p className='Observe'>By ensuring that the currentSection state is correctly managed and updated, only one sell have the currentSection class at a By ensuring that the currentSection state is correctly managed and updated, only one section button will have bdkjqshbdfkjbgmqgion class at a time, eliminating the conffdssdsdflict where two sections appear activefdsfsdf simultaneously.time, eliminating the conflict where two sections appear active simultaneously.</p>
             </div>
-            <div className=' Block AboutTwo'>
+            {/* <div className=' Block AboutTwo'>
                 <h1 className='Observe'>BLBALBLA</h1>
                 <p className='Observe'>By ensuring that the currentSection state is correctly managed and updated, only one section button will have the currentSection class at a time, eliminating the conflict where two sections appear active simultaneously.By ensuring that the currentSection state is correctly managed and updated, only one section button will have the currentSection class at a time, eliminating the conflict where two sections appear active simultaneously.</p>
-            </div>
+            </div> */}
         </div>
         <div className="right-side Observe"></div>
     </section>
