@@ -10,7 +10,9 @@
  #Header{
     width: 100%;
     height: 25%;
-    background-color: var(--darkBlue-color);
+    background-image: url('../media//images/hole.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -65,7 +67,7 @@
 /************************/
 
 #Navigation{
-    width: 50vw;
+    width: 53vw;
     height: 5vh;
     border-radius: 20px;
     position: fixed;
@@ -89,8 +91,8 @@
     justify-content: space-evenly;
     align-items: center;
     bottom: 20px;
-    background-color: rgba(36, 25, 25, 0.7); /* Couleur de fond de la partie gauche avec transparence */
-    backdrop-filter: blur(10px); /* Effet de flou */
+    background-color: rgba(36, 25, 25, 0.7);
+    backdrop-filter: blur(10px);
     margin: 1vw;
 }
 
@@ -100,7 +102,7 @@
     border-radius: 100px;
     padding: 1vw;
     background-color: transparent;
-
+    cursor: pointer;
 }
 
 #NavigationPhone Button div{
@@ -128,35 +130,40 @@
 
 #HomeButton{
     background-image: url('../media/images/home.png');
+    cursor: pointer;
 }
 
 #ContactButton{
     background-image: url('../media/images/contact.png');
+    cursor: pointer;
 }
 
 #SkillsButton{
     background-image: url('../media/images/roue.png');
+    cursor: pointer;
 }
 
 #ProjectsButton{
     background-image: url('../media/images/book.png');
+    cursor: pointer;
 }
 
 #AboutButton{
     background-image: url('../media/images/person.png');
-
+    cursor: pointer;
 }
 
 #Navigation button{
     background-color: transparent;
     color: var(--white-color);
-    width: 10vw;
+    width: 12vw;
     height: 6vh;
-    font-size: 1.4vw;
     font-family: 'Abang';
     border-bottom: 1px  solid rgba(255, 255, 255, 0);
     transition: all 0.3s ease-in-out; /* Smooth transition */
     position: relative;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
 #Navigation button::after {
@@ -226,8 +233,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
+
 .Header .TitleContainer {
     width: 80%;
     height: 80%;
@@ -250,23 +257,22 @@
     margin-top: 1vh;
     margin-bottom: 2vh;
     color: var(--white-color);
-
 }
 
 .Header .TitleContainer .Title h1 {
-    font-size: 5vw;
     font-weight: bold;
     transform: translateX(-50%);
     opacity: 0;
     animation: textRiseUp 0.6s forwards 0.5s;
+    font-size: 4rem;
 }
 
 .Header .TitleContainer .Text p {
-    width: 70%;
-    font-size: 2vw;
+    width: 80%;
     transform: translateX(-50%);
     opacity: 0;
     animation: textRiseUp 0.6s forwards 0.9s;
+    font-size: 1.6rem;
 }
 
 @keyframes lineSlideIn {
@@ -290,5 +296,8 @@
     }
 }
 
-
-
+@media screen and (max-width: 800px){
+    .Header .TitleContainer .Title h1 {
+        font-size: 3rem;
+    }
+}

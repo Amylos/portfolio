@@ -6,15 +6,12 @@ import '../styles/about.css'
 
 const About = forwardRef((props, ref) => {
 
-    let options = {
-        // threshold: 0.1 // Déclenche lorsque 50% de l'élément est visible
-      };
     useEffect(()=>{
         const observer = new IntersectionObserver(entries =>{
             entries.forEach((entry) =>{
                if(entry.isIntersecting)  entry.target.classList.add('active');
             });
-        },options);
+        });
         const elements = document.querySelectorAll('.Observe');
 
         elements.forEach((element) =>{

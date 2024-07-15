@@ -7,9 +7,31 @@
  */
 
 
-
-#Footer{
+#Footer {
     width: 100%;
     height: 25%;
-    background-color: var(--orange-color);
+    position: relative;
+    background-image: url('../media/images/moon.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transform: rotate(180deg);
+}
+
+#Footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, var(--black-color), rgba(0, 0, 0, 0.4));
+    pointer-events: none;
+    z-index: 1;
+}
+
+#Footer > * {
+    position: relative;
+    z-index: 2;
+    color: white;
 }

@@ -7,13 +7,20 @@ const Stack = forwardRef((props, ref) => {
     <section ref={ref} className='Stack' id='Stack'>
 
         <h1>Stack Developpeur</h1>
-            <div className='StackLogo'>
-                <div className='Logo ReactIcon'></div>
-                <div className='Logo SymfonyIcon'></div>
-                <div className='Logo SQLIcon'></div>
-            </div>
+      <div className='StackContainer'>
+          <div className='StackLogo'>
+              <div className='Logo ReactIcon'></div>
+              <div className='Logo SymfonyIcon'></div>
+              <div className='Logo SQLIcon'></div>
+              <div className='Logo DockerIcon'></div>
+              <div className='Logo GitIcon'></div>
+              <div className='Logo TailwindIcon'></div>
+          </div>
+          <div id="Fusee">
+          </div>
 
-
+          
+      </div>
     </section>
   );
 });

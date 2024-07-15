@@ -19,22 +19,22 @@ const Projects = forwardRef((props, ref) => {
       };
     }, []);
 
-    const toggleProject = () => {
-      setIsProjectOpen(!isProjectOpen);
+    const toggleProject = (project) => {
+      setIsProjectOpen(project);
     };
 
 
   return (
     <section ref={ref} className='Projects' id='Projects'>
 
-            <h1>Projets selectionnes</h1>
+            <h1 className='selectedProject'>Projets selectionnes</h1>
 
             <div className='SectionContainer'>
                 <div className="SectionInfos">
-                    <div className="Section">
-                    <div className="SectionAnimated" onClick={toggleProject}>
-                        <p className='ProjectName'>Project Name</p>
-                        <p className='ProjectDescription'>Project Description</p>
+                    <div className="Section EPH">
+                    <div className="SectionAnimated" onClick={() => toggleProject('EPH')}>
+                        <h1 className='ProjectName'>Ephemeride</h1>
+                        <p className='ProjectDescription'>Création d'une application web pour un spectacle intéractif</p>
                     </div>
                     </div>
                     <ul className='StackUsed'>
@@ -47,46 +47,52 @@ const Projects = forwardRef((props, ref) => {
                 </div>
 
                 <div className="SectionInfos">
-                    <div className="Section">
-                    <div className="SectionAnimated" onClick={toggleProject}>
-                        <p className='ProjectName'>Project Name</p>
-                        <p className='ProjectDescription'>Project Description</p>
-                    </div>
+                    <div className="Section CNES">
+                      <div className="SectionAnimated" onClick={() => toggleProject('CNES')}>
+                          <h1 className='ProjectName'>Projet Marauder</h1>
+                          <p className='ProjectDescription'>Développement des commandes de pilotage des moteurs pour un rover du CNES</p>
+                      </div>
                     </div>
                     <ul className='StackUsed'>
-                        <li>React JS</li>
-                        <li>Strapi</li>
-                        <li>MySQL</li>
-                        <li>PHP</li>
-                        <li>webSocket</li>
+                        <li>ROS2</li>
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>Python</li>
                     </ul>
                 </div>
 
                 <div className="SectionInfos">
-                    <div className="Section">
-                    <div className="SectionAnimated" onClick={toggleProject}>
-                        <p className='ProjectName'>Project Name</p>
-                        <p className='ProjectDescription'>Project Description</p>
+                    <div className="Section GAP">
+                    <div className="SectionAnimated" onClick={() => toggleProject('GAP')}>
+                        <h1 className='ProjectName'>Gestionnaire d'article personnalise</h1>
+                        <p className='ProjectDescription'>Création d'un mini CMS pour des articles</p>
                     </div>
                     </div>
                     <ul className='StackUsed'>
                         <li>React JS</li>
-                        <li>Strapi</li>
-                        <li>MySQL</li>
-                        <li>PHP</li>
-                        <li>webSocket</li>
+                        <li>Symfony</li>
                     </ul>
                 </div>
-
-                
 
             </div>
-
 
             <div className={isProjectOpen ? 'ProjectBackgroundDisplayed' : 'ProjectBackground'} >
-            <div className={isProjectOpen ? 'ProjectDisplayed' : 'Project'}  ref={projectRef}>
-                {isProjectOpen && <p></p>}
+            {
+              isProjectOpen === 'EPH' ?
+              <div className={isProjectOpen ? 'ProjectDisplayed' : 'Project'}  ref={projectRef}>
+               
+              </div>
+              :
+              isProjectOpen === 'CNES' ?
+              <div className={isProjectOpen ? 'ProjectDisplayed' : 'Project'}  ref={projectRef}>
             </div>
+            :
+            isProjectOpen === 'GAP' ?
+            <div className={isProjectOpen ? 'ProjectDisplayed' : 'Project'}  ref={projectRef}>
+        </div>
+
+              : null
+            }
         </div>
 
 

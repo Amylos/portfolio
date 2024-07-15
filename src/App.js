@@ -5,7 +5,10 @@ import Projects from './components/Projects';
 import Stack from './components/Stack';
 import Footer from './components/Footer';
 import About from './components/About';
-import Animation from './components/Animation';
+
+
+
+
 
 function App() {
 

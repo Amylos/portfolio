@@ -15,21 +15,20 @@
     overflow: hidden;
     background-color: #f0f0f0;
     display: flex;
+
 }
 
 
 .left-side {
     padding: 2vw;
-    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: start;
     width: 70%;
     height: 100%;
-    background-color: #000000; /* Couleur de fond de la partie gauche */
+    background-color: #000000;
     clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-
 }
 
 .right-side{
@@ -38,6 +37,7 @@
     width: 38%;
     background-image: url('../media/images/andrew\ \(2\).png');
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: -40px;
     height: 100%;
     clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
@@ -77,9 +77,12 @@
 
 .Block h1{
     margin: 1vw;
-    font-size: 3vw;
     opacity: 1;
+    font-size: 2rem;
+}
 
+.Block p{
+    font-size: 1.5rem;
 }
 
 .Block h1.active{
@@ -90,9 +93,7 @@
     animation: textRiseUp 1.3s ease-in;
 }
 
-.Block p{
-    font-size: 1vw;
-}
+
 
 @keyframes textRiseUp {
     0% {
@@ -107,18 +108,49 @@
 
 
 
+@media screen and (max-width: 1200px){
+    .right-side{
+        background-position: -120px;
+    }
+}
 
 
 
 
 
-
-
-
-/** RETIRER LA DECOUPE **/
-@media (max-width: 768px) {
+@media screen and (max-width: 800px){
     .left-side,
     .right-side {
         clip-path: none;
     }
+
+    .About{
+        display: flex;
+        flex-direction: column;
+        background-color: #000000;
+    }
+    .left-side {
+        width: 100%;
+        position: static;
+    }
+
+    .right-side{
+        width: 100%;
+        position: static;
+        background-position: 0px;
+
+    }
+
+
+
+    .Block h1{
+        opacity: 1;
+        font-size: 1rem;
+    }
+
+    .Block p{
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
 }

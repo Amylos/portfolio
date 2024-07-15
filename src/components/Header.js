@@ -38,18 +38,18 @@ const Header = forwardRef((props, ref) => {
           </div>
             }
             <div id='DisplayMode'>
-                <div>A</div>
+                <div></div>
                 <div>FR</div>
             </div>
         </nav>
 
         <main id='Presentation'>
-                <div class="TitleContainer">
-                    <div class="Title">
+                <div className="TitleContainer">
+                    <div className="Title">
                         <h1>Developpeur web</h1>
                     </div>
-                    <div class="Line"></div>
-                    <div class="Text">
+                    <div className="Line"></div>
+                    <div className="Text">
                         <p>I work with forward-thinking people to design and <strong>build</strong> interactive, accessible websites and products. From working on projects for likes of Aardman Animations, UNHCR, RNLI, and Honda, to working at startups in Tokyo, I've devoted more than a decade to making the web a little bit brighter.</p>
                     </div>
                  </div>
