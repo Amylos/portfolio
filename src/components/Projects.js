@@ -1,19 +1,20 @@
-import React, { forwardRef, useState, useRef } from 'react';
-import { FaArrowRight } from 'react-icons/fa';
+import React, { forwardRef, useState, useRef,useEffect } from 'react';
+import { FaArrowRight,FaExternalLinkAlt   } from 'react-icons/fa';
 import '../styles/projects.css';
 
 const projects = [
   {
     id: 1,
     class:"EPH",
-    title: 'Ephémeride',
+    title: 'Ephemeride',
     description: 'Application pour un spectacle interactif "12 Poèmes Numériques"',
-    text: '',
+    text: `Éphéméride est une application conçue pour être le compagnon de voyage lors du spectacle interactif "12 Poèmes Numériques". Elle offre aux spectateurs une expérience immersive en leur permettant d'interagir en direct avec le spectacle grâce à une communication en temps réel.
+            . Les spectateurs deviennent acteur de leur spectacle.`,
     lien: 'https://app.petitenature.fr/EPH',
     video: 'https://www.youtube.com/watch?v=eD5JU7V3-WI',
     photo: '../media/images/',
     stack: ['React', 'PHP', 'MySQL'],
-    client: 'La compagnie petite nature',
+    client: 'La Compagnie Petite Nature',
     type: 'Projet Web',
     rapport:''
   },
@@ -22,29 +23,31 @@ const projects = [
     class:"ROVER",
     title: 'Marauder',
     description: 'Développement des modules de pilotage pour un rover',
-    text: ' Développement des modules de pilotage pour un roverDéveloppement des modules de pilotage pour un roverDéveloppement des modules de pilotage pour un roverDéveloppement des modules de pilotage pour un roverDéveloppement des modules de pilotage pour un rover',
+    text: `Le Marauder est un projet visant à développer un système de pilotage pour un rover,
+            permettant d'explorer les technologies robotiques. Son objectif est de fournir des solutions
+            pour enseigner les techniques spatiales aux ingénieurs.`,
     lien: 'http://git.lycee-bourdelle.fr/Garnier/dynamixelsdk',
     video: 'https://www.youtube.com/watch?v=rCWNg7uB7ZY',
     photo: '../media/images/',
     stack: ['C++', 'Python', 'ROS2'],
-    client: 'CNES',
+    client: ' le CNES',
     type: 'Projet Embarqué',
     rapport:''
   },
-  {
-    id: 3,
-    class:"CMS",
-    title: `Gestionnaire d'articles personnalise`,
-    description: 'Application de type CMS pour la gestion d\'article',
-    text: '',
-    lien: '',
-    video: null,
-    photo: '../media/images/',
-    stack: ['React', 'Symfony', 'MySQL'],
-    client: 'Projet de licence',
-    type: 'Projet Web',
-    rapport:''
-  },
+  // {
+  //   id: 3,
+  //   class:"CMS",
+  //   title: `Gestionnaire d'articles personnalise`,
+  //   description: 'Application de type CMS pour la gestion d\'article',
+  //   text: '',
+  //   lien: '',
+  //   video: null,
+  //   photo: '../media/images/',
+  //   stack: ['React', 'Symfony', 'MySQL'],
+  //   client: 'Projet de licence',
+  //   type: 'Projet Web',
+  //   rapport:''
+  // },
 ];
 
 
@@ -70,12 +73,31 @@ const Projects = forwardRef((props, ref) => {
       window.open('../media/videos/AGCV.pdf', '_blank');
     };
 
+
+
+    useEffect(() => {
+      const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) entry.target.classList.add('active');
+          });
+      });
+
+      const elements = document.querySelectorAll('.Observe');
+      elements.forEach(element => {
+          observer.observe(element);
+      });
+
+      return () => {
+          observer.disconnect();
+      };
+  }, []);
+
   return (
     <section ref={ref} className='Projects' id='Projects'>
       <h1 id='TitleProjects'>Projets selectionnes</h1>
       <div id='SelectedProjects'>
         {projects.map(project => (
-          <div className='Project' key={project.id} onClick={() => handleClickProject(project)}>
+          <div className='Project Observe' key={project.id} onClick={() => handleClickProject(project)}>
             <div className={`ProjectImg ${project.class} `}>
               <div className='ProjectAnimation'></div>
             </div>
@@ -98,10 +120,12 @@ const Projects = forwardRef((props, ref) => {
               </div>
               <div className='PartTwo'>
                 <p className="ProjectDetailsDescription">{selectedProject.text}</p>
-                <p className="ProjectDetailsClient">Projet réalisé pour le {selectedProject.client}</p>
+                {/* <p className="ProjectDetailsClient">Projet réalisé pour {selectedProject.client}</p> */}
               </div>
               <div className='PartThree'>
-              <a  className='LinkProject' href={selectedProject.lien} target='blank'>Visiter</a>
+              <p className="ProjectDetailsClient">Projet réalisé pour <strong>{selectedProject.client}</strong> </p>
+
+              <a  className='LinkProject' href={selectedProject.lien} target='blank'>Visiter <FaExternalLinkAlt  /></a>
               </div>
             </div>
             <div className='ProjectDetailsContainerRight'>
@@ -136,13 +160,7 @@ const Projects = forwardRef((props, ref) => {
               </div>
             )}
 
-
             </div>
-
-
-
-         
-
 
           </div>
         </div>

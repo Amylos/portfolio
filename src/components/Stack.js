@@ -1,8 +1,27 @@
 // components/Stack.js
-import React, { forwardRef } from 'react';
+import React, { forwardRef,useEffect } from 'react';
 import '../styles/stack.css'
 
 const Stack = forwardRef((props, ref) => {
+
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('active');
+        });
+    });
+
+    const elements = document.querySelectorAll('.Observe');
+    elements.forEach(element => {
+        observer.observe(element);
+    });
+
+    return () => {
+        observer.disconnect();
+    };
+}, []);
+
   return (
     <section ref={ref} className='Stack' id='Stack'>
 
@@ -12,9 +31,9 @@ const Stack = forwardRef((props, ref) => {
       </div>
 
       <div className='Technologies'>
-        <div className='FrontEnd'>
+        <div className='DevWeb Observe'>
           <div className='TechTitle'>
-            <h2>Front-end</h2>
+            <h2>Développement web</h2>
           </div>
           <div className='TechLogos'>
             <div className='Logos'><div className='Logo ReactIcon'></div></div>
@@ -23,7 +42,7 @@ const Stack = forwardRef((props, ref) => {
             <div className='Logos'><div className='Logo SQLIcon'></div></div>
           </div>
         </div>
-        <div className='Systeme'>
+        <div className='Systeme Observe'>
           <div className='TechTitle'>
             <h2>Système et logiciel</h2>
           </div>

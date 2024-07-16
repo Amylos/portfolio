@@ -40,24 +40,26 @@
 /**********************/
 
 
-#Logo{
+#Logo {
     width: 17vw;
     height: 14vh;
     text-align: center;
-    animation: Appearing 1.7s linear;
     background-image: url('../media/images/Andrew.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    animation: AppearingLogo 1.7s ease-in-out;
+    position: relative;
 }
 
-
-@keyframes Appearing {
-    0%{
+@keyframes AppearingLogo {
+    0% {
         opacity: 0;
+        transform: translateY(-200px);
     }
-    100%{
+    100% {
         opacity: 1;
+        transform: translateY(0px);
     }
 }
 
@@ -90,7 +92,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    bottom: 20px;
+    bottom: 3rem;
     background-color: rgba(36, 25, 25, 0.7);
     backdrop-filter: blur(10px);
     margin: 1vw;
@@ -279,7 +281,6 @@
 .link {
     background-color: #f0f0f0;
     border: none;
-    padding: 10px 20px;
     margin: 5px;
     cursor: pointer;
     display: inline-flex;
@@ -302,11 +303,14 @@
   }
 
   .link a {
+    width:100%;
+    height:100%;
     display: flex;
     align-items: center;
     text-decoration: none;
     color: inherit;
-  }
+    padding: 10px 20px;
+}
 
   .icon {
     margin-right: 8px;
@@ -349,6 +353,10 @@
 }
 
 @media screen and (max-width: 800px){
+    #Logo{
+        width: 27vw;
+        height: 24vh;
+    }
     .Header .TitleContainer .Text p {
         width: 90%;
     }
@@ -362,6 +370,10 @@
 
 
 @media screen and (max-width: 560px){
+    #Logo{
+        width: 37vw;
+        height: 34vh;
+    }
     .Header .TitleContainer .Text p {
         width: 95%;
     }
@@ -373,3 +385,4 @@
         font-size: 1.2rem;
     }
 }
+

@@ -20,7 +20,7 @@ const Header = forwardRef((props, ref) => {
     <header ref={ref} className='Header' id='Header'>
 
         <nav id='NavBar'>
-                <a href='wwww.andrewgarnier.fr' id="Logo"></a>
+                <a href='https://www.andrewgarnier.fr' id="Logo"></a>
             {
                 windowWidth > 800 ?
 
@@ -52,24 +52,24 @@ const Header = forwardRef((props, ref) => {
                 </div>
                 <div className="Line"></div>
                 <div className="Text">
-                    <p>I work with forward-thinking people to design and <strong>build</strong> interactive, accessible websites and products. From working on projects for likes of Aardman Animations, UNHCR, RNLI, and Honda, to working at startups in Tokyo, I've devoted more than a decade to making the web a little bit brighter.</p>
+                  <p>Concevoir et développer des expériences web uniques.</p>
                 </div>
                 <div>
-                <button className="link">
-                  <a href="https://github.com/Amylos" target="_blank" rel="noopener noreferrer">
-                    <FaGithub className="icon" /> <span>GitHub</span>
-                  </a>
-                </button>
-                <button className="link">
-                  <a href="https://www.linkedin.com/in/andrew-garnier-820166282/" target="_blank" rel="noopener noreferrer">
-                    <FaLinkedin className="icon" /> <span>LinkedIn</span>
-                  </a>
-                </button>
-                <button className="link">
-                  <a href="mailto:andrewgarnier@gmail.com">
-                    <FaEnvelope className="icon" /> <span>andrewgarnier@gmail.com</span>
-                  </a>
-                </button>
+                  <button className="link">
+                    <a href="https://github.com/Amylos" target="_blank" rel="noopener noreferrer">
+                      <FaGithub className="icon" /> <span>GitHub</span>
+                    </a>
+                  </button>
+                  <button className="link">
+                    <a href="https://www.linkedin.com/in/andrew-garnier-820166282/" target="_blank" rel="noopener noreferrer">
+                      <FaLinkedin className="icon" /> <span>LinkedIn</span>
+                    </a>
+                  </button>
+                  <button className="link">
+                    <a href="mailto:andrewgarnier@gmail.com">
+                      <FaEnvelope className="icon" /> <span>andrewgarnier@gmail.com</span>
+                    </a>
+                  </button>
                 </div>
               </div>
         </main>

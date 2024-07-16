@@ -36,8 +36,9 @@ const About = forwardRef((props, ref) => {
         <section ref={ref} className='About' id="About">
             <div className="left-side">
                 <div className='Block AboutOne'>
-                    <h1 className='Observe'>BLABLB</h1>
-                    <p className='Observe'>By ensuring that the currentSection state is correctly managed and updated, only one section button will have the currentSection class at a time, eliminating the conflict where two sections appear active simultaneously.</p>
+                    <h1 className='Observe'>Qui suis-je ?</h1>
+                    <p className='Observe'>À 26 ans, je suis actuellement à la recherche d'une alternance dans le domaine du développement web. Fort de mon bachelor MMI avec un parcours en développement web, j'ai acquis des bases solides dans plusieurs langages et frameworks tels que Javascript, PHP, React et Symfony, ainsi que des compétences en gestion de bases de données et en gestion des réseaux.
+                                            Afin de consolider mes acquis et de me spécialiser davantage, je souhaite maintenant compléter mon parcours par un mastère en alternance à l'école My Digital School d'Angers.</p>
                 </div>
                 <button className="link" onClick={handleDownload}>
                     <FaFileAlt className="icon" /> <span> Télécharger mon CV</span>
