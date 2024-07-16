@@ -9,7 +9,7 @@
 
 #Footer {
     width: 100%;
-    height: 25%;
+    height: 20%;
     position: relative;
     background-image: url('../media/images/moon.jpg');
     background-repeat: no-repeat;
@@ -53,11 +53,7 @@
     transform: rotate(180deg);
   }
 
-  .contact-info, .social-links {
-    flex: 1;
-  }
 
-  /* Ajouter cette section dans footer.css */
 
 .copyright {
     background-color: #222;
@@ -65,55 +61,5 @@
     padding: 10px;
     text-align: center;
     font-size: 0.9em;
-  }
-  
-
-  .contact-info h3, .social-links h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-  }
-  
-  .social-links ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .social-links ul li {
-    margin: 0 10px;
-  }
-  
-  .social-links ul li a {
-    color: #fff;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    transition: all 0.3s ease;
-  }
-  
-  .social-links ul li a:hover {
-    color: #00bcd4;
-  }
-  
-  .social-links ul li a svg {
-    margin-right: 5px;
-    font-size: 1.2em;
-  }
-  
-  /* Exemple d'animation */
-  .Footer {
-    animation: slideIn 1s ease-in-out;
-  }
-  
-  @keyframes slideIn {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
   

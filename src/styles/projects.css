@@ -22,7 +22,6 @@
     font-size: 2rem;
     color: var(--white-color);
     margin-top: 2rem;
-    border-bottom: 1px solid white;
 }
 
 #SelectedProjects {
@@ -47,11 +46,24 @@
 .ProjectImg {
     width: 100%;
     height: 70%;
-    background-image: url('../media/images/ordinateur.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     transition: all 0.5s;
+}
+
+.EPH{
+    background-image: url('../media/images/eph.png');
+}
+
+.ROVER{
+    background-image: url('../media/images/rover.png');
+}
+
+.CMS{
+    background-image: url('../media/images/gap.png');
+    background-size: contain;
+    background-color: white;
 }
 
 .ProjectAnimation {
@@ -117,19 +129,7 @@
     animation: popProject 0.3s ease;
 }
 
-.ProjectDetailsContainer {
-    background-color: white;
-    padding: 20px;
-    width: 50%;
-    height: 50%;
-    overflow-y: auto;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    animation: popProject 0.3s ease;
-    opacity: 1;
-    z-index: 1001;
-    pointer-events: auto;
-}
+
 
 
 @keyframes popProject {
@@ -140,19 +140,169 @@
     100%{
         opacity: 1;
     }
-    
+
 }
+
+
+
+
+/* Nouveaux styles pour Project */
+
+.ProjectDetailsContainer {
+    background-color: white;
+    padding: 20px;
+    width: 60rem;
+    height: 40rem;
+    overflow-y: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: popProject 0.3s ease;
+    opacity: 1;
+    z-index: 1001;
+    pointer-events: auto;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.ProjectDetailsContainerLeft{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.ProjectDetailsContainerRight{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.PartOne{
+    width: 100%;
+    height: 31%;
+
+}
+
+.PartTwo{
+    width: 100%;
+    height: 31%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.PartThree{
+    width: 100%;
+    height: 31%;
+    position: relative;
+}
+
 
 .ProjectDetailsTitle {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    font-family: 'Abang';
+    margin-top: 4rem;
+    margin-left: 2rem;
 }
+
+
 
 .ProjectDetailsDescription {
-    font-size: 16px;
-    line-height: 1.5;
+    margin-left: 2rem;
 }
 
+.ProjectDetailsClient{
+    margin-left: 2rem;
+
+}
+
+.LinkProject{
+    width: 5rem;
+    height: 2rem;
+    position: absolute;
+    left: 2rem;
+    bottom: 3rem;
+    width: 5rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black-color);
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+.ProjectDetailsVideo{
+    margin: 1rem;
+    height: 50%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black-color);
+    box-shadow: 0px 0px 5px 1px black;
+}
+
+.Frame{
+    width: 98%;
+    height: 98%;
+
+}
+
+
+.ProjectDetailsStack {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ProjectDetailsStack ul {
+    width: 70%;
+    height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+  }
+
+  .ProjectDetailsStack li {
+    width: 5rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black-color);
+    font-size: 1rem;
+    color: var(--white-color);
+
+  }
+
+  .ProjectDetailsLink a {
+    text-decoration: none;
+    color: var(--darkBlue-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+
+
+
+
+/**/
 
 /**************ANIMATION******************/
 
@@ -224,240 +374,111 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-#Projects .selectedProject{
-    width: 80%;
-    font-size: 3rem;
-    margin: 1rem;
-    border-top: 1px solid white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.SectionContainer{
-    width:100%;
-    height: 80%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: start;
-    padding: 2rem;
-}
-
-.SectionInfos{
-    width: 25%;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.StackUsed{
-    width: 100%;
-    height:40%;
-    list-style: none;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.StackUsed li{
-    padding: 0.2rem;
-    color: rgb(94 234 212);
-    background-color: rgba(45, 212, 191, .1);
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 80px;
-    margin: 0.2rem;
-}
-
-.Section{
-    width: 20rem;
-    height: 20rem;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-    background-color: white;
-}
-
-
-@media screen and (max-width: 1150px){
-    .Section{
-        width: 15rem;
-        height: 16rem;
-    }
-}
-
 @media screen and (max-width: 1000px){
-    .Section{
-        width: 13rem;
-        height: 13rem;
+
+    .ProjectDetailsContainer{
+        width: 50rem;
+        height: 30rem;
     }
 }
 
+@media screen and (max-width: 850px){
 
-@media screen and (max-width: 800px){
-    .SectionContainer{
-        flex-direction: column;
-    }
-
-    .SectionInfos{
-        width: 100%;
-        height: 80%;
-        display: flex;
-        flex-direction: row;
-    }
-
-    .StackUsed{
-        width: 100%;
-        height:40%;
-        list-style: none;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .StackUsed li{
-        width: 6rem;
-    }
-
-    .Section{
+    .ProjectDetailsContainer{
         width: 30rem;
-        height: 13rem;
+        height: 50rem;
+        display: flex;
+        flex-direction: column;
     }
 
-    #Projects .selectedProject{
-        font-size: 2rem;
+    .ProjectDetailsTitle{
+        margin-top: 1rem;
+    }
+
+
+    .ProjectDetailsContainerLeft{
+        width: 100%;
+        height: 55%;
+    }
+
+    .ProjectDetailsContainerRight{
+        width: 100%;
+        height: 45%;
+    }
+   
+
+    .ParOne{
+        height: 10%;
+    }
+    .PartTwo{
+
+        height: 60%;
+
+    }
+    .PartThree{
+        height: 30%;
     }
 }
 
 
+@media screen and (max-width: 550px){
 
+    .ProjectDetailsContainer{
+        width: 20rem;
+        height: 50rem;
+        display: flex;
+        flex-direction: column;
+    }
 
+    .ParOne{
+        height: 10%;
+    }
+    .PartTwo{
 
-.EPH{
-    background-image: url('../media/images/eph.png');
-    background-size: contain;
-
-}
-.CNES{
-    background-image: url('../media/images/rover.png');
-    background-size: cover;
-
-
-}
-.GAP{
-    background-image: url('../media/images/gap.png');
-    background-size: contain;
-
-}
-
-
-
-
-
-.SectionAnimated {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(5, 5, 25,0);
-    color: rgba(255, 255, 255, 0);
-    transition: all 0.3s;
-    position: absolute;
-    padding: 10px;
-}
-
-.Section:hover .SectionAnimated  {
-    background-color: rgb(5, 5, 25,0.7);
-    color: rgba(255, 255, 255, 1);
-    transform: scale(0.8);
-}
-
-.ProjectName{
-}
-
-.ProjectDescription{
-}
-
-.ProjectBackgroundDisplayed {
-    height: 400%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    top: 0;
-    opacity: 1;
-    animation: backgroundAppear 0.3s forwards;
-    transition: opacity 0.3s;
-}
-
-.ProjectDisplayed{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    height: 60%;
-    background-color: var(--white-color);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    animation: Appear 1s linear;
-}
-
-
-
-@keyframes Appear {
-    0% {
-        transform: translate(-50%, -50%);
+        height: 60%;
 
     }
-    50% {
-        transform: translate(-50%, -50%);
+    .PartThree{
+        height: 40%;
+    }
 
+
+    .ProjectDetailsContainerLeft{
+        width: 100%;
+        height: 55%;
     }
-    100% {
-        transform: translate(-50%, -50%);
+
+    .ProjectDetailsContainerRight{
+        width: 100%;
+        height: 45%;
     }
+   
+
+
 }
- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
