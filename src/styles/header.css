@@ -275,6 +275,46 @@
     font-size: 1.6rem;
 }
 
+
+.link {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 200px;
+    border: 1px solid transparent;
+    animation: linkRiseUp 0.6s forwards 0.9s;
+    opacity: 0;
+    margin-top: 0.3rem;
+    transition: all 0.1s;
+  }
+
+  .link:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid white;
+    color: white;
+  }
+
+  .link a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .icon {
+    margin-right: 8px;
+  }
+
+
+
+
 @keyframes lineSlideIn {
     0% {
         transform: translateX(600%);
@@ -296,8 +336,40 @@
     }
 }
 
+
+@keyframes linkRiseUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @media screen and (max-width: 800px){
+    .Header .TitleContainer .Text p {
+        width: 90%;
+    }
     .Header .TitleContainer .Title h1 {
         font-size: 3rem;
+    }
+    .Header .TitleContainer .Text p{
+        font-size: 1.5rem;
+    }
+}
+
+
+@media screen and (max-width: 560px){
+    .Header .TitleContainer .Text p {
+        width: 95%;
+    }
+
+    .Header .TitleContainer .Title h1 {
+        font-size: 2rem;
+    }
+    .Header .TitleContainer .Text p{
+        font-size: 1.2rem;
     }
 }

@@ -6,91 +6,221 @@
 --white-color
  */
 
-
- #Projects{
+ #Projects {
     width: 100%;
-    height: 25%;
-    background: linear-gradient(var(--black-color),var(--darkBlue-color));
-    display: flex;
+    height: 15%;
+    background-image: linear-gradient(
+        180deg,
+        hsl(0, 0%, 0%) 0%,
+        var(--darkBlue-color) 94%
+      );    display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#TitleProjects{
-    font-size: 2.5rem;
+#TitleProjects {
+    font-size: 2rem;
+    color: var(--white-color);
+    margin-top: 2rem;
+    border-bottom: 1px solid white;
 }
 
-#SelectedProjects{
+#SelectedProjects {
     width: 90%;
-    height: 50%;
-    background-color: red;
+    height: 80%;
     margin: 1rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.Project{
+.Project {
     width: 23rem;
     height: 25rem;
-    background-color: green;
     border-radius: 7px;
     overflow: hidden;
+    margin: 0.5rem;
+    position: relative;
 }
 
-.ProjectImg{
+.ProjectImg {
     width: 100%;
     height: 70%;
-    background-color: yellow;
     background-image: url('../media/images/ordinateur.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: all 0.5s;
 }
 
-.ProjectAnimation{
+.ProjectAnimation {
     width: 100%;
     height: 100%;
     background-color: rgb(0, 0, 0);
     opacity: 0;
+    transform: scale(130%);
+    transition: all 0.5s;
 }
 
-.ProjectInfos{
+.ProjectInfos {
     width: 100%;
     height: 30%;
-    background-color: rgb(35, 35, 37);
-    padding:1rem;
+    background-color: rgb(0, 0, 0);
+    padding: 1rem;
+    position: relative;
 }
 
-
-
-.ProjectTitle{
+.ProjectTitle {
     margin-bottom: 0.3rem;
+    color: var(--white-color);
 }
 
-.ProjectText{
+.ProjectText {
     color: rgb(140, 137, 137);
-    position: relative;
-}
-
-.ProjectShow{
-    color: rgb(140, 137, 137);
-    position: relative;
     overflow: hidden;
+    position: absolute;
+    left: 1rem;
 }
 
-/**/
-.ProjectText span{
+.ProjectShow {
+    color: rgb(140, 137, 137);
+    overflow: hidden;
+    position: absolute;
+    left: 1rem;
+}
+
+.ProjectText span {
     display: inline-block;
-    transform: translateX(-1.3rem);
+    transition: all 0.5s;
 }
 
 .ProjectShow span {
     display: inline-block;
-    transform: translateX(-1.3rem);
+    transform: translateY(2rem);
+    transition: all 0.5s;
 }
 
 
+.ProjectDetailsOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fond noir semi-transparent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Assure que l'overlay est au-dessus de tout le reste */
+    opacity:1;
+    animation: popProject 0.3s ease;
+}
+
+.ProjectDetailsContainer {
+    background-color: white;
+    padding: 20px;
+    width: 50%;
+    height: 50%;
+    overflow-y: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: popProject 0.3s ease;
+    opacity: 1;
+    z-index: 1001;
+    pointer-events: auto;
+}
+
+
+@keyframes popProject {
+    0%{
+        opacity: 0;
+
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+.ProjectDetailsTitle {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.ProjectDetailsDescription {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/**************ANIMATION******************/
+
+.Project:hover{
+    cursor: pointer;
+}
+.Project:hover .ProjectImg {
+    transform: scale(1.1);
+}
+
+.Project:hover .ProjectAnimation {
+    opacity: 0.8;
+    transform: scale(80%);
+}
+
+.Project:hover .ProjectText span {
+    opacity: 0;
+    transform: translateX(-3rem);
+}
+
+.Project:hover .ProjectShow span {
+    opacity: 1;
+    transform: translateY(0rem);}
+
+
+/**************FRAMES******************/
+
+
+@media screen and (max-width: 1300px){
+
+    #Projects {
+        height: 20%;
+    }
+
+    .Project{
+        width: 20rem;
+        height:20rem;
+    }
+
+    .ProjectInfos{
+        padding:0.6rem;
+        padding-left: 1rem;
+    }
+
+    .ProjectTitle{
+        margin-bottom: 0.2rem;
+        font-size: 1.3rem;
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width: 800px){
+    #Projects{
+        height: 30%;
+    }
+}
+
+@media screen and (max-width: 450px){
+
+    #TitleProjects{
+        font-size: 1.4rem;
+    }
+
+}
 
 
 

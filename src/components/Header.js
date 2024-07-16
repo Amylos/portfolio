@@ -1,6 +1,8 @@
 // components/Header.js
 import React, { forwardRef } from 'react';
 import '../styles/header.css'
+import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+
 
 const Header = forwardRef((props, ref) => {
 
@@ -44,15 +46,32 @@ const Header = forwardRef((props, ref) => {
         </nav>
 
         <main id='Presentation'>
-                <div className="TitleContainer">
-                    <div className="Title">
-                        <h1>Developpeur web</h1>
-                    </div>
-                    <div className="Line"></div>
-                    <div className="Text">
-                        <p>I work with forward-thinking people to design and <strong>build</strong> interactive, accessible websites and products. From working on projects for likes of Aardman Animations, UNHCR, RNLI, and Honda, to working at startups in Tokyo, I've devoted more than a decade to making the web a little bit brighter.</p>
-                    </div>
-                 </div>
+            <div className="TitleContainer">
+                <div className="Title">
+                    <h1>Developpeur web</h1>
+                </div>
+                <div className="Line"></div>
+                <div className="Text">
+                    <p>I work with forward-thinking people to design and <strong>build</strong> interactive, accessible websites and products. From working on projects for likes of Aardman Animations, UNHCR, RNLI, and Honda, to working at startups in Tokyo, I've devoted more than a decade to making the web a little bit brighter.</p>
+                </div>
+                <div>
+                <button className="link">
+                  <a href="https://github.com/Amylos" target="_blank" rel="noopener noreferrer">
+                    <FaGithub className="icon" /> <span>GitHub</span>
+                  </a>
+                </button>
+                <button className="link">
+                  <a href="https://www.linkedin.com/in/andrew-garnier-820166282/" target="_blank" rel="noopener noreferrer">
+                    <FaLinkedin className="icon" /> <span>LinkedIn</span>
+                  </a>
+                </button>
+                <button className="link">
+                  <a href="mailto:andrewgarnier@gmail.com">
+                    <FaEnvelope className="icon" /> <span>andrewgarnier@gmail.com</span>
+                  </a>
+                </button>
+                </div>
+              </div>
         </main>
 
     </header>
