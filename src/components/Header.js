@@ -20,16 +20,16 @@ const Header = forwardRef((props, ref) => {
     <header ref={ref} className='Header' id='Header'>
 
         <nav id='NavBar'>
-                <a href='https://www.andrewgarnier.fr' id="Logo"></a>
+                <a href='/' id="Logo"></a>
             {
                 windowWidth > 800 ?
 
             <div id='Navigation'>
-              <button onClick={() => scrollToSection('Header')} className={currentSection === 'Header' ? 'currentSection' :''}>Home</button>
+              <button onClick={() => scrollToSection('Header')} className={currentSection === 'Header' ? 'currentSection' :''}>Accueil</button>
                 <button onClick={() => scrollToSection('About')} className={currentSection === 'About' ? 'currentSection' :''}>A propos</button>
                 <button onClick={() => scrollToSection('Projects')} className={currentSection === 'Projects' ? 'currentSection' :''}>Projets</button>
                 <button onClick={() => scrollToSection('Stack')} className={currentSection === 'Stack' ? 'currentSection' :''}>Stack</button>
-                <button onClick={() => scrollToSection('Footer')} className={currentSection === 'Footer' ? 'currentSection' :''}>Footer</button>
+                <button onClick={() => scrollToSection('Footer')} className={currentSection === 'Footer' ? 'currentSection' :''}>Contact</button>
             </div>
             :<div id='NavigationPhone'>
             <button onClick={() => scrollToSection('Header')} className={currentSection === 'Header' ? 'currentSection' :''} ><div id='HomeButton'></div></button>

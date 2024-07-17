@@ -68,8 +68,15 @@ body{
 
 h1{
     font-family: 'Abang';
+    font-size: 3rem;
 }
 
-p,button,a{
+h2{
+    font-family: 'BreeSerif';
+    font-size: 2rem;
+
+}
+
+p,button,a,h3{
     font-family: 'BreeSerif';
 }

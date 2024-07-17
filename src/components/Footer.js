@@ -31,7 +31,7 @@ const Footer = forwardRef((props, ref) => {
             </div>
         </div>
         <h1>By Andrew Garnier.</h1>
-        <p className='CopyRight'>&copy; {new Date().getFullYear()} Andrew Garnier. Tous droits réservés.</p>
+        <p className='CopyRight'> {new Date().getFullYear()} Andrew Garnier. Tous droits réservés.</p>
       </div>
     </footer>
   );

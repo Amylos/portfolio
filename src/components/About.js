@@ -37,9 +37,7 @@ const About = forwardRef((props, ref) => {
             <div className="left-side">
                 <div className='Block AboutOne'>
                     <h1 className='Observe'>Qui suis-je ?</h1>
-                    <p className='Observe'>À 26 ans, je suis actuellement à la recherche d'une alternance dans le domaine du développement web. Fort de mon bachelor MMI avec un parcours en développement web, j'ai acquis des bases solides dans plusieurs langages et frameworks tels que Javascript, PHP, React et Symfony, ainsi que des compétences en gestion de bases de données et en gestion des réseaux.
-                                            Afin de consolider mes acquis et de me spécialiser davantage, je souhaite maintenant compléter mon parcours par un mastère en alternance à l'école My Digital School d'Angers.</p>
-                </div>
+                    <p className='Observe'>À 26 ans, je suis en quête d'une alternance, ayant repris mes études il y a trois ans après une reconversion professionnelle. Passionné par la création de sites et d'applications à partir d'idées originales, je trouve que ce domaine offre un potentiel créatif fascinant, il représente pour moi un monde de possibilités infinies.</p></div>
                 <button className="link" onClick={handleDownload}>
                     <FaFileAlt className="icon" /> <span> Télécharger mon CV</span>
                 </button>

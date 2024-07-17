@@ -26,7 +26,7 @@ const Stack = forwardRef((props, ref) => {
     <section ref={ref} className='Stack' id='Stack'>
 
       <div className='StackEnTete'>
-        <h1 className='StackTtitle'>Technologies</h1>
+        <h1 className='StackTtitle'>Stack technique</h1>
         <div className="StackLine"></div>
       </div>
 
@@ -44,7 +44,7 @@ const Stack = forwardRef((props, ref) => {
         </div>
         <div className='Systeme Observe'>
           <div className='TechTitle'>
-            <h2>Système et logiciel</h2>
+            <h2>Outils DevOps et Système</h2>
           </div>
           <div className='TechLogos'>
             <div className='Logos'><div className='Logo DockerIcon'></div></div>

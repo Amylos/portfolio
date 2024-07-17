@@ -8,7 +8,7 @@ const projects = [
     class:"EPH",
     title: 'Ephemeride',
     description: 'Application pour un spectacle interactif "12 Poèmes Numériques"',
-    text: `Éphéméride est une application conçue pour être le compagnon de voyage lors du spectacle interactif "12 Poèmes Numériques". Elle offre aux spectateurs une expérience immersive en leur permettant d'interagir en direct avec le spectacle grâce à une communication en temps réel.
+    text: `Éphéméride est une application conçue pour être le compagnon de voyage lors du spectacle interactif "12 Poèmes Numériques". Elle offre aux spectateurs une expérience immersive en leur permettant d'interagir en direct avec le spectacle.
             . Les spectateurs deviennent acteur de leur spectacle.`,
     lien: 'https://app.petitenature.fr/EPH',
     video: 'https://www.youtube.com/watch?v=eD5JU7V3-WI',
@@ -37,13 +37,12 @@ const projects = [
   // {
   //   id: 3,
   //   class:"CMS",
-  //   title: `Gestionnaire d'articles personnalise`,
-  //   description: 'Application de type CMS pour la gestion d\'article',
-  //   text: '',
+  //   title: `Mon portfolio`,
+  //   description: 'Première version de mon portfolio',
+  //   text: `Vous êtes actuellement sur la première version de mon portfolio que j'ai fait fin Juillet 2024`,
   //   lien: '',
   //   video: null,
-  //   photo: '../media/images/',
-  //   stack: ['React', 'Symfony', 'MySQL'],
+  //   stack: ['React'],
   //   client: 'Projet de licence',
   //   type: 'Projet Web',
   //   rapport:''
@@ -95,6 +94,7 @@ const Projects = forwardRef((props, ref) => {
   return (
     <section ref={ref} className='Projects' id='Projects'>
       <h1 id='TitleProjects'>Projets selectionnes</h1>
+      <div className="StackLine"></div>
       <div id='SelectedProjects'>
         {projects.map(project => (
           <div className='Project Observe' key={project.id} onClick={() => handleClickProject(project)}>
@@ -102,7 +102,7 @@ const Projects = forwardRef((props, ref) => {
               <div className='ProjectAnimation'></div>
             </div>
             <div className='ProjectInfos'>
-              <h2 className='ProjectTitle'>{project.title}</h2>
+              <h3 className='ProjectTitle'>{project.title}</h3>
               <p className='ProjectText'><span>{project.type}</span></p>
               <p className='ProjectShow'><span>Show <FaArrowRight size={10} color="grey" className="custom-icon" /></span></p>
             </div>
