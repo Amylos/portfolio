@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.5ffdd208.css",
+    "main.js": "/portfolio/static/js/main.35c0f082.js",
+    "static/media/andrew2.png": "/portfolio/static/media/andrew2.56bbac3c8e5f4e251135.png",
+    "static/media/hole.png": "/portfolio/static/media/hole.b6ea75b4f0a7b6a7c583.png",
+    "static/media/AndrewGarnierCV.pdf": "/portfolio/static/media/AndrewGarnierCV.6cd231c7e7be9a414e85.pdf",
+    "static/media/rover.png": "/portfolio/static/media/rover.4fc1006ff32e5f9ec231.png",
+    "static/media/ros.png": "/portfolio/static/media/ros.69bd525316488d163486.png",
+    "static/media/CC.png": "/portfolio/static/media/CC.9858674111467f6b0975.png",
+    "static/media/C.png": "/portfolio/static/media/C.1eb64b9224a944973116.png",
+    "static/media/moon.jpg": "/portfolio/static/media/moon.d0a0c2f4e7b727c4fab4.jpg",
+    "static/media/tailwind.png": "/portfolio/static/media/tailwind.145fb0c455635d75d3b4.png",
+    "static/media/BreeSerif-Regular.ttf": "/portfolio/static/media/BreeSerif-Regular.751eb941c0e1335ad247.ttf",
+    "static/media/React-Icon.png": "/portfolio/static/media/React-Icon.1e5639fdfd7c944093d3.png",
+    "static/media/gitIcon.png": "/portfolio/static/media/gitIcon.b9d36de01a33fb12e9d4.png",
+    "static/media/docker.png": "/portfolio/static/media/docker.3d495637d9e9873bccd2.png",
+    "static/media/MySQL-Icon.png": "/portfolio/static/media/MySQL-Icon.1dc2631b700f5f1688c4.png",
+    "static/media/eph.png": "/portfolio/static/media/eph.67f24a2026bfbf267771.png",
+    "static/media/Abang.otf": "/portfolio/static/media/Abang.b7dbbc902ac704fb5f29.otf",
+    "index.html": "/portfolio/index.html",
+    "main.5ffdd208.css.map": "/portfolio/static/css/main.5ffdd208.css.map",
+    "main.35c0f082.js.map": "/portfolio/static/js/main.35c0f082.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5ffdd208.css",
+    "static/js/main.35c0f082.js"
+  ]
+}

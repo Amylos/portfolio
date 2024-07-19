@@ -71,6 +71,8 @@
   }
 
   .left-side .link {
+    text-decoration: none;
+    color: black;
     background-color: #f0f0f0;
     border: none;
     margin: 5px;
